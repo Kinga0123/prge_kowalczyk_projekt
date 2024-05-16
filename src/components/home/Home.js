@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import plan_wat from "./plan_wat.jpg";
+import koncert from "./koncert.jpg";
 
 function Home({ text }) {
   return (
@@ -10,14 +10,14 @@ function Home({ text }) {
       </div>
       <div className="home_bottom">
         <div className="home_left">
-          <img className="plan_wat" src={plan_wat} alt="logo" />
+          <img className="koncert" src={koncert} alt="logo" />
         </div>
 
         <div className="home_right">
           <div className="home_right_title">GEOPORTAL</div>
 
           <div className="home_right_subtitle">
-            Strona internetowa z interaktywną mapą
+            Geoportal do zarządzania wydarzeniami muzycznymi
           </div>
 
           <button className="home_right_button">START</button>
