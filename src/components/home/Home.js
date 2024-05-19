@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import koncert from "./koncert.jpg";
+import { Link } from "react-router-dom";
 
 function Home({ text }) {
   return (
@@ -19,8 +20,9 @@ function Home({ text }) {
           <div className="home_right_subtitle">
             Geoportal do zarządzania wydarzeniami muzycznymi
           </div>
-
-          <button className="home_right_button">START</button>
+          <Link to="services">
+            <button className="home_right_button">START</button>
+          </Link>
         </div>
       </div>
     </div>

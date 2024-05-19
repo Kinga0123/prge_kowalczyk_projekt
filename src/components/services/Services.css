@@ -1,0 +1,110 @@
+.services_title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-left: 60px;
+  /* background-color: aqua; */
+}
+
+.services_bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* background-color: orange; */
+}
+
+.services {
+  /* background-color: yellow; */
+  padding: 10px;
+}
+
+.services_obj {
+  background-color: #27b4d3;
+  padding: 55px;
+  margin: 100px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-right: 700px;
+  width: 100px;
+  height: 100px;
+}
+
+.services_obj2 {
+  background-color: #a627d3;
+  padding: 55px;
+  margin: 100px;
+  margin-top: 100px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 700px;
+  width: 100px;
+  height: 100px;
+}
+
+.services_obj3 {
+  background-color: #d37a27;
+  padding: 50px;
+  margin: 100px;
+  margin-top: 100px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 700px;
+  width: 100px;
+  height: 100px;
+}
+
+/* .obrazki {
+  background-color: brown;
+  width: 285px;
+  height: 280px;
+  margin: 10px 0px;
+  flex-direction: column;
+} */
+
+.obrazek1 {
+  /* background-color: black; */
+  width: 283px;
+  height: 261px;
+  padding: 10px;
+  margin: 200px;
+  margin-top: 200px;
+}
+
+.obrazek2 {
+  /* background-color: rgb(38, 211, 41); */
+  width: 300px;
+  height: 261px;
+  padding: 10px;
+  margin: 200px;
+  margin-top: 200px;
+}
+
+.obrazek3 {
+  /* background-color: rgb(168, 28, 28); */
+  width: 283px;
+  height: 261px;
+  padding: 10px;
+  margin: 200px;
+  margin-top: 110px;
+}
+
+/* .koncerty {
+  width: 600px;
+}
+
+.klienci {
+  width: 600px;
+}
+
+.koncert_klient {
+  width: 600px;
+} */

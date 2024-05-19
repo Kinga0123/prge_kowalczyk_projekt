@@ -22,16 +22,15 @@
   align-content: center;
 }
 .koncert {
-  width: 700px;
+  width: 600px;
 }
 .home_right_title {
   font-style: normal;
   font-weight: 400;
   font-size: 96px;
   line-height: 115px;
-  /* align-items: center
-    text_align: center; */
-
+  /* align-items: center;
+  text-align: center; */
   color: #000000;
 }
 .home_right_subtitle {
@@ -39,7 +38,6 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 50px;
-
   color: #000000;
 }
 .home_right_button {
@@ -73,16 +71,4 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-@media screen and (max-width: 1000px) {
-  * {
-    /* background-color: blue; */
-  }
-  .home_bottom {
-    flex-direction: column;
-  }
-  .plan_wat {
-    width: 85vw;
-    margin: 0 15vw;
-  }
 }
