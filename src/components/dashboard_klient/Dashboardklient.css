@@ -1,0 +1,55 @@
+.dashboard_title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.obrazki_klienci {
+  padding: 100px;
+  width: 350px;
+  height: 350px;
+  margin: 10px 0px;
+  flex-direction: column;
+}
+
+.napisy_klienci {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: -300px;
+  margin-left: 800px;
+  flex-direction: column;
+}
+
+.Kinga {
+  width: 350px;
+  height: 350px;
+}
+
+.Adrian {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px;
+}
+
+.Patryk {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px;
+}
+
+.Ewa {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px;
+}
+
+.Julia {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px;
+}

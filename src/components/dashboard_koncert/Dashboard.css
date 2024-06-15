@@ -1,0 +1,79 @@
+.dashboard_title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.zdjecia {
+  padding: 100px;
+  width: 550px;
+  height: 330px;
+  margin: 10px 0px;
+  flex-direction: column;
+}
+
+.napisy {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: -300px;
+  margin-left: 800px;
+  flex-direction: column;
+}
+
+.discopolo1 {
+  width: 550px;
+  height: 350px;
+}
+
+.techno1 {
+  margin-top: 50px;
+  width: 550px;
+  height: 350px;
+}
+
+.rock1 {
+  margin-top: 50px;
+  width: 550px;
+  height: 350px;
+}
+
+.rap1 {
+  margin-top: 50px;
+  width: 550px;
+  height: 350px;
+}
+
+.pop1 {
+  margin-top: 50px;
+  width: 550px;
+  height: 350px;
+}
+
+.mapa_button {
+  width: 103px;
+  height: 95px;
+  top: 160px;
+  margin-left: 1090px;
+  position: relative;
+}
+
+.menu {
+  width: 91px;
+  height: 78px;
+  margin-left: -250px;
+  top: 160px;
+  position: relative;
+}
+
+.windows_start {
+  width: 91px;
+  height: 92px;
+  margin-left: 230px;
+  top: 160px;
+  position: relative;
+}

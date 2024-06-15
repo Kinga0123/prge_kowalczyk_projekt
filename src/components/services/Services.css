@@ -76,7 +76,7 @@
   height: 261px;
   padding: 10px;
   margin: 200px;
-  margin-top: 200px;
+  margin-top: 30px;
 }
 
 .obrazek2 {
@@ -85,7 +85,7 @@
   height: 261px;
   padding: 10px;
   margin: 200px;
-  margin-top: 200px;
+  margin-top: -150px;
 }
 
 .obrazek3 {
@@ -94,7 +94,7 @@
   height: 261px;
   padding: 10px;
   margin: 200px;
-  margin-top: 110px;
+  margin-top: -190px;
 }
 
 /* .koncerty {
@@ -108,3 +108,11 @@
 .koncert_klient {
   width: 600px;
 } */
+
+.services_baza_danych {
+  width: 283px;
+  height: 261px;
+  padding: 10px;
+  margin: 400px;
+  margin-top: -1025px;
+}
