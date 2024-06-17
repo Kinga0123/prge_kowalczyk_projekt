@@ -12,22 +12,14 @@ import rap from "./rap.jpg";
 import pop from "./pop.jpg";
 import { Link } from "react-router-dom";
 import mapa from "./mapa.png";
-import windows_start from "./windows_start.png";
-import menu from "./menu.png";
 
-function Dashboard() {
+function Dashboard_koncert_klient() {
   return (
     <div className="dasboard_koncerty_2">
       <div className="button">
         <Link to="map_koncert_klient">
           <img className="mapa_button" src={mapa} alt="mapa" />
         </Link>
-        <img
-          className="windows_start"
-          src={windows_start}
-          alt="windows_start"
-        />
-        <img className="menu" src={menu} alt="menu" />
       </div>
       <div className="dashboard_koncert">
         <div className="dashboard_title">Baza klientów wybranego koncertu</div>
@@ -68,4 +60,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Dashboard_koncert_klient;

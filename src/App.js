@@ -8,6 +8,7 @@ import Mapkoncertklient from "./components/map_koncert_klient/Mapkoncertklient";
 import Dashboard from "./components/dashboard_koncert/Dashboard";
 import Dashboard_klient from "./components/dashboard_klient/Dashboard_klient";
 import Dashboard_koncert_klient from "./components/dashboard_koncert_klient/Dashboard_koncert_klient";
+import About from "./components/about/About";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/services/dashboard_koncert_klient/map_koncert_klient",
     element: <Mapkoncertklient />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

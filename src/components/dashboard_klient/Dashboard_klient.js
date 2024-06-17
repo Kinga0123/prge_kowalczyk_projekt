@@ -6,23 +6,15 @@ import Patryk from "./Patryk.png";
 import Ewa from "./Ewa.png";
 import Julia from "./Julia.png";
 import mapa from "./mapa.png";
-import windows_start from "./windows_start.png";
-import menu from "./menu.png";
 import { Link } from "react-router-dom";
 
-function Dashboard() {
+function Dashboard_klient() {
   return (
     <div className="dasboard_koncerty_2">
       <div className="button">
         <Link to="map_klienci">
           <img className="mapa_button" src={mapa} alt="mapa" />
         </Link>
-        <img
-          className="windows_start"
-          src={windows_start}
-          alt="windows_start"
-        />
-        <img className="menu" src={menu} alt="menu" />
       </div>
       <div className="dashboard_koncert">
         <div className="dashboard_title">Baza klientów</div>
@@ -45,4 +37,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Dashboard_klient;
