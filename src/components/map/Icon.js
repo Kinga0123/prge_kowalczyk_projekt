@@ -1,9 +1,9 @@
 import L from "leaflet";
-import Kinga from "./Kinga.png";
-import Adrian from "./Adrian.png";
-import Patryk from "./Patryk.png";
-import Ewa from "./Ewa.png";
-import Julia from "./Julia.png";
+import discopolo from "./discopolo.jpg";
+import techno from "./techno.jpg";
+import rock from "./rock.jpg";
+import rap from "./rap.jpg";
+import pop from "./pop.jpg";
 
 const LeafIcon = L.Icon.extend({
   options: {
@@ -12,8 +12,8 @@ const LeafIcon = L.Icon.extend({
     tooltipAnchor: [0, 0],
   },
 });
-export const KingaIcon = new LeafIcon({ iconUrl: Kinga });
-export const AdrianIcon = new LeafIcon({ iconUrl: Adrian });
-export const PatrykIcon = new LeafIcon({ iconUrl: Patryk });
-export const EwaIcon = new LeafIcon({ iconUrl: Ewa });
-export const JuliaIcon = new LeafIcon({ iconUrl: Julia });
+export const discopoloIcon = new LeafIcon({ iconUrl: discopolo });
+export const technoIcon = new LeafIcon({ iconUrl: techno });
+export const rockIcon = new LeafIcon({ iconUrl: rock });
+export const rapIcon = new LeafIcon({ iconUrl: rap });
+export const popIcon = new LeafIcon({ iconUrl: pop });

@@ -9,8 +9,9 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
+import MarkerPlacement_koncert_klient from "./MarkerPlacement_koncert_klient";
 
-function Map() {
+function Mapkoncertklient() {
   const [wojewodztwa, setwojewodztwa] = useState(null);
 
   const makePopup = (feature, layer) => {
@@ -40,7 +41,7 @@ function Map() {
   }, []);
   return (
     <div className="map">
-      <MapContainer center={[52.2322222, 21.0]} zoom={10}>
+      <MapContainer center={[52.2322222, 21.0]} zoom={6}>
         <LayersControl>
           <LayersControl.BaseLayer name="OSM">
             <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -64,9 +65,10 @@ function Map() {
               ""
             )}
           </LayersControl.Overlay>
+          <MarkerPlacement_koncert_klient />
         </LayersControl>
       </MapContainer>
     </div>
   );
 }
-export default Map;
+export default Mapkoncertklient;

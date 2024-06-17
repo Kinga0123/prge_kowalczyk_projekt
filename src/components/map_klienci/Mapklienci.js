@@ -41,7 +41,7 @@ function Mapklienci() {
   }, []);
   return (
     <div className="map">
-      <MapContainer center={[52.2322222, 21.0]} zoom={10}>
+      <MapContainer center={[52.2322222, 21.0]} zoom={6}>
         <LayersControl>
           <LayersControl.BaseLayer name="OSM">
             <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
