@@ -1,8 +1,14 @@
 import React from "react";
 import { Circle, Marker, Popup } from "react-leaflet";
-import { KingaIcon, AdrianIcon, PatrykIcon, EwaIcon, JuliaIcon } from "./Icon";
+import {
+  KingaIcon,
+  AdrianIcon,
+  PatrykIcon,
+  EwaIcon,
+  JuliaIcon,
+} from "./Icon_klienci";
 
-function MarkerPlacement() {
+function MarkerPlacement_klienci() {
   return (
     <div className="markery">
       <div>
@@ -39,4 +45,4 @@ function MarkerPlacement() {
   );
 }
 
-export default MarkerPlacement;
+export default MarkerPlacement_klienci;

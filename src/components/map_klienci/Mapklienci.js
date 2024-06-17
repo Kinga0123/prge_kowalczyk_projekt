@@ -9,8 +9,9 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
+import MarkerPlacement_klienci from "./MarkerPlacement_klienci";
 
-function Map() {
+function Mapklienci() {
   const [wojewodztwa, setwojewodztwa] = useState(null);
 
   const makePopup = (feature, layer) => {
@@ -64,9 +65,10 @@ function Map() {
               ""
             )}
           </LayersControl.Overlay>
+          <MarkerPlacement_klienci />
         </LayersControl>
       </MapContainer>
     </div>
   );
 }
-export default Map;
+export default Mapklienci;
