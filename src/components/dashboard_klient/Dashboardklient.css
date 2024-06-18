@@ -1,0 +1,28 @@
+.mapa_button {
+  width: 103px;
+  height: 95px;
+  margin-left: 550px;
+  position: relative;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Odstęp między kartami */
+  padding: 16px; /* Padding kontenera */
+  text-align: center;
+}
+
+.card-container > * {
+  max-width: 100%; /* Ustaw maksymalną szerokość kart */
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 48px;
+  margin-left: 60px;
+  position: relative;
+  margin-top: -50px;
+}
