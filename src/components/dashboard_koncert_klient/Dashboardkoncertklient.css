@@ -1,109 +1,28 @@
-.dashboard_title {
+.map_button {
+  width: 103px;
+  height: 95px;
+  margin-left: 950px;
+  position: relative;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Odstęp między kartami */
+  padding: 16px; /* Padding kontenera */
+  text-align: center;
+}
+
+.card-container > * {
+  max-width: 100%; /* Ustaw maksymalną szerokość kart */
+}
+
+.title {
   display: flex;
   justify-content: flex-start;
   font-size: 48px;
-  font-weight: 600;
-  margin-top: 60px;
   margin-left: 60px;
-}
-
-.obrazki1 {
-  padding: 100px;
-  width: 350px;
-  height: 350px;
-  margin: 10px 0px;
-  flex-direction: column;
-}
-
-.napisy1 {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 36px;
-  font-weight: 600;
-  margin-top: 300px;
-  margin-left: 600px;
-  flex-direction: column;
-}
-
-.Kinga {
-  width: 350px;
-  height: 350px;
-}
-
-.Adrian {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Patryk {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Ewa {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Julia {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.obrazki2 {
-  padding: 100px;
-  width: 550px;
-  height: 330px;
-  margin: -550px 800px;
-  flex-direction: column;
-}
-
-.napisy2 {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 36px;
-  font-weight: 600;
-  margin-top: -1950px;
-  margin-left: 1600px;
-  flex-direction: column;
-}
-
-.discopolo {
-  width: 550px;
-  height: 350px;
-}
-
-.techno {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.rock {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.rap {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.pop {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.strzalka {
-  width: 120px;
-  position: absolute;
-  margin-left: 50px;
-  margin-top: 140px;
+  position: relative;
+  margin-top: -50px;
 }

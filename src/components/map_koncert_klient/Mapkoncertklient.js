@@ -43,7 +43,7 @@ function Mapkoncertklient() {
     <div className="map">
       <MapContainer center={[52.2322222, 21.0]} zoom={6}>
         <LayersControl>
-          <LayersControl.BaseLayer name="OSM">
+          <LayersControl.BaseLayer checked name="OSM">
             <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Google">
@@ -58,7 +58,7 @@ function Mapkoncertklient() {
               url="http://127.0.0.1:8080/geoserver/prge/wms"
             />
           </LayersControl.BaseLayer>
-          <LayersControl.Overlay checked name="Granice województw DB WFS">
+          <LayersControl.Overlay name="Granice województw DB WFS">
             {wojewodztwa ? (
               <GeoJSON data={wojewodztwa} onEachFeature={makePopup} />
             ) : (

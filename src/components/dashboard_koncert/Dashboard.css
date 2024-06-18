@@ -1,63 +1,28 @@
-.dashboard_title {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 48px;
-  font-weight: 600;
-  margin-top: 60px;
-  margin-left: 60px;
-}
-
-.zdjecia {
-  padding: 100px;
-  width: 550px;
-  height: 330px;
-  margin: 10px 0px;
-  flex-direction: column;
-}
-
-.napisy {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 36px;
-  font-weight: 600;
-  margin-top: -300px;
-  margin-left: 800px;
-  flex-direction: column;
-}
-
-.discopolo1 {
-  width: 550px;
-  height: 350px;
-}
-
-.techno1 {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.rock1 {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.rap1 {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
-.pop1 {
-  margin-top: 50px;
-  width: 550px;
-  height: 350px;
-}
-
 .mapa_button {
   width: 103px;
   height: 95px;
-  top: 160px;
-  margin-left: 950px;
+  margin-left: 550px;
   position: relative;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Odstęp między kartami */
+  padding: 16px; /* Padding kontenera */
+  text-align: center;
+}
+
+.card-container > * {
+  max-width: 100%; /* Ustaw maksymalną szerokość kart */
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 48px;
+  margin-left: 60px;
+  position: relative;
+  margin-top: -50px;
 }

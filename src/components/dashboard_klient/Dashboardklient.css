@@ -1,55 +1,28 @@
-.dashboard_title {
+.mapa_button {
+  width: 103px;
+  height: 95px;
+  margin-left: 550px;
+  position: relative;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Odstęp między kartami */
+  padding: 16px; /* Padding kontenera */
+  text-align: center;
+}
+
+.card-container > * {
+  max-width: 100%; /* Ustaw maksymalną szerokość kart */
+}
+
+.title {
   display: flex;
   justify-content: flex-start;
   font-size: 48px;
-  font-weight: 600;
-  margin-top: 60px;
   margin-left: 60px;
-}
-
-.obrazki_klienci {
-  padding: 100px;
-  width: 350px;
-  height: 350px;
-  margin: 10px 0px;
-  flex-direction: column;
-}
-
-.napisy_klienci {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 36px;
-  font-weight: 600;
-  margin-top: -300px;
-  margin-left: 800px;
-  flex-direction: column;
-}
-
-.Kinga {
-  width: 350px;
-  height: 350px;
-}
-
-.Adrian {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Patryk {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Ewa {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
-}
-
-.Julia {
-  margin-top: 50px;
-  width: 350px;
-  height: 350px;
+  position: relative;
+  margin-top: -50px;
 }

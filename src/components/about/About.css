@@ -53,3 +53,16 @@
   font-size: 20px;
   font-style: italic;
 }
+
+.about {
+  background-color: white; /* domyślne tło */
+  color: black; /* domyślny kolor tekstu */
+}
+.dark {
+  background-color: black; /* tło dla trybu ciemnego */
+  color: white; /* kolor tekstu dla trybu ciemnego */
+}
+
+.switch {
+  margin-left: 50px;
+}

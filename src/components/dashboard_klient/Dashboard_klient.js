@@ -7,30 +7,42 @@ import Ewa from "./Ewa.png";
 import Julia from "./Julia.png";
 import mapa from "./mapa.png";
 import { Link } from "react-router-dom";
+import MediaCard from "./Card_klient";
 
 function Dashboard_klient() {
+  const input_list = [
+    {
+      name: "Kinga",
+      image: Kinga,
+    },
+    {
+      name: "Adrian",
+      image: Adrian,
+    },
+    {
+      name: "Patryk",
+      image: Patryk,
+    },
+    {
+      name: "Ewa",
+      image: Ewa,
+    },
+    {
+      name: "Julia",
+      image: Julia,
+    },
+  ];
   return (
-    <div className="dasboard_koncerty_2">
+    <div>
       <div className="button">
         <Link to="map_klienci">
           <img className="mapa_button" src={mapa} alt="mapa" />
         </Link>
-      </div>
-      <div className="dashboard_koncert">
-        <div className="dashboard_title">Baza klientów</div>
-        <div className="obrazki_klienci">
-          <img className="Kinga" src={Kinga} alt="kinga" />
-          <img className="Adrian" src={Adrian} alt="adrian" />
-          <img className="Patryk" src={Patryk} alt="patryk" />
-          <img className="Ewa" src={Ewa} alt="ewa" />
-          <img className="Julia" src={Julia} alt="julia" />
-        </div>
-        <div className="napisy_klienci">
-          <div className="Kinga">Kinga</div>
-          <div className="Adrian">Adrian</div>
-          <div className="Patryk">Patryk</div>
-          <div className="Ewa">Ewa</div>
-          <div className="Julia">Julia</div>
+        <h1 className="title">Baza klientów</h1>
+        <div className="card-container">
+          {input_list.map((item) => {
+            return <MediaCard name={item.name} image={item.image} />;
+          })}
         </div>
       </div>
     </div>

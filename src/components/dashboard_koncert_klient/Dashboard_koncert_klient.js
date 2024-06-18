@@ -1,59 +1,59 @@
 import React from "react";
 import "./Dashboardkoncertklient.css";
-import Kinga from "./Kinga.png";
-import Adrian from "./Adrian.png";
-import Patryk from "./Patryk.png";
-import Ewa from "./Ewa.png";
-import Julia from "./Julia.png";
-import discopolo from "./discopolo.jpg";
-import techno from "./techno.jpg";
-import rock from "./rock.jpg";
-import rap from "./rap.jpg";
-import pop from "./pop.jpg";
 import { Link } from "react-router-dom";
 import mapa from "./mapa.png";
+import MediaCard from "./Card_koncert_klient";
+import Kinga_disco from "./Kinga_disco.png";
+import Adrian_techno from "./Adrian_techno.png";
+import Patryk_rock from "./Patryk_rock.png";
+import Ewa_rap from "./Ewa_rap.png";
+import Julia_pop from "./Julia_pop.png";
 
 function Dashboard_koncert_klient() {
+  const input_list = [
+    {
+      name: "Kinga",
+      content: "Koncert Disco Polo",
+      image: Kinga_disco,
+    },
+    {
+      name: "Adrian",
+      content: "Koncert Techno",
+      image: Adrian_techno,
+    },
+    {
+      name: "Patryk",
+      content: "Koncert Rock",
+      image: Patryk_rock,
+    },
+    {
+      name: "Ewa",
+      content: "Koncert Rap",
+      image: Ewa_rap,
+    },
+    {
+      name: "Julia",
+      content: "Koncert Pop",
+      image: Julia_pop,
+    },
+  ];
   return (
-    <div className="dasboard_koncerty_2">
+    <div>
       <div className="button">
         <Link to="map_koncert_klient">
-          <img className="mapa_button" src={mapa} alt="mapa" />
+          <img className="map_button" src={mapa} alt="mapa" />
         </Link>
-      </div>
-      <div className="dashboard_koncert">
-        <div className="dashboard_title">Baza klientów wybranego koncertu</div>
-        <div className="rysunki">
-          <div className="obrazki1">
-            <img className="Kinga" src={Kinga} alt="kinga" />
-            <img className="Adrian" src={Adrian} alt="adrian" />
-            <img className="Patryk" src={Patryk} alt="patryk" />
-            <img className="Ewa" src={Ewa} alt="ewa" />
-            <img className="Julia" src={Julia} alt="julia" />
-          </div>
-          <div className="obrazki2">
-            <img className="discopolo" src={discopolo} alt="discopolo" />
-            <img className="techno" src={techno} alt="techno" />
-            <img className="rock" src={rock} alt="rock" />
-            <img className="rap" src={rap} alt="rap" />
-            <img className="pop" src={pop} alt="pop" />
-          </div>
-        </div>
-        <div className="tytuly">
-          <div className="napisy1">
-            <div className="Kinga">Kinga</div>
-            <div className="Adrian">Adrian</div>
-            <div className="Patryk">Patryk</div>
-            <div className="Ewa">Ewa</div>
-            <div className="Julia">Julia</div>
-          </div>
-          <div className="napisy2">
-            <div className="discopolo">Disco Polo</div>
-            <div className="techno">Techno</div>
-            <div className="rock">Rock</div>
-            <div className="rap">Rap</div>
-            <div className="pop">Pop</div>
-          </div>
+        <h1 className="title">Baza klientów wybranego koncertu</h1>
+        <div className="card-container">
+          {input_list.map((item) => {
+            return (
+              <MediaCard
+                name={item.name}
+                content={item.content}
+                image={item.image}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

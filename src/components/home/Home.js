@@ -15,10 +15,8 @@ function Home({ text }) {
         <div className="home_left">
           <img className="koncert" src={koncert} alt="logo" />
         </div>
-
         <div className="home_right">
           <div className="home_right_title">GEOPORTAL</div>
-
           <div className="home_right_subtitle">
             Geoportal do zarządzania wydarzeniami muzycznymi
           </div>
