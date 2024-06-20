@@ -33,8 +33,8 @@ function About() {
         </div>
         <div className="podglad">
           <iframe
-            class="mapkoncertklient"
-            src="http://localhost:3000/services/map_koncert_klient"
+            class="map"
+            src="http://localhost:3000/services/map"
             frameborder="0"
             allowfullscreen
           ></iframe>

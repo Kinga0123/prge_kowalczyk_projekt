@@ -1,44 +1,44 @@
 import React, { useEffect, useState } from "react";
 import "./Map.css";
-import {
-  LayersControl,
-  MapContainer,
-  TileLayer,
-  WMSTileLayer,
-  GeoJSON,
-} from "react-leaflet";
+import { LayersControl, MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
-import MarkerPlacement from "./MarkerPlacement";
+import mikrofon from "./mikrofon.jpg";
+import L from "leaflet";
+
+let DefaultIcon = L.icon({
+  iconUrl: mikrofon,
+  iconSize: [60, 96],
+  iconAnchor: [30, 10],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 function Map() {
-  const [wojewodztwa, setwojewodztwa] = useState(null);
+  const [koncerty, setKoncerty] = useState(null);
 
   const makePopup = (feature, layer) => {
     if (feature.properties) {
-      // console.log(feature.properties);
       layer.bindPopup(`
-      <h1>Dane województwa</h1>
-      <strong>Nazwa:</strong> ${feature.properties.jpt_nazwa_}</br>
-      <strong>Powierzchnia:</strong>${feature.properties.jpt_powier} m2 </br>
-      <img src=${feature.properties.img_source} alt="Lamp" width="32" height="32"/>`);
+      <h1>Dane koncertu</h1>
+      <strong>Gatunek muzyczny:</strong> ${feature.properties.nazwa}</br>`);
     }
   };
 
   useEffect(() => {
-    // console.log("aaa");
     const getData = () => {
       axios
         .get(
-          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Agranice_wojewodztw_db_4326&maxFeatures=50&outputFormat=application%2Fjson"
+          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Akoncerty&maxFeatures=50&outputFormat=application%2Fjson"
         )
-        .then((dane) => {
-          // console.log(dane);
-          setwojewodztwa(dane.data);
+        .then((response) => {
+          setKoncerty(response.data);
         });
     };
     getData();
+    console.log(koncerty);
   }, []);
+
   return (
     <div className="map">
       <MapContainer center={[52.2322222, 21.0]} zoom={6}>
@@ -52,20 +52,13 @@ function Map() {
           <LayersControl.BaseLayer name="Google Satelite">
             <TileLayer url="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}" />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Granice województw DB">
-            <WMSTileLayer
-              layers="granice_wojewodztw"
-              url="http://127.0.0.1:8080/geoserver/prge/wms"
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.Overlay name="Granice województw DB WFS">
-            {wojewodztwa ? (
-              <GeoJSON data={wojewodztwa} onEachFeature={makePopup} />
+          <LayersControl.Overlay name="Mapa koncertów">
+            {koncerty ? (
+              <GeoJSON data={koncerty} onEachFeature={makePopup} />
             ) : (
               ""
             )}
           </LayersControl.Overlay>
-          <MarkerPlacement />
         </LayersControl>
       </MapContainer>
     </div>
