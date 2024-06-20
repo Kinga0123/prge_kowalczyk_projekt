@@ -4,7 +4,7 @@ import techno from "./techno.jpg";
 import rock from "./rock.jpg";
 import rap from "./rap.jpg";
 import pop from "./pop.jpg";
-import mikrofon from "./mikrofon.jpg";
+import pinezka from "./pinezka.png";
 
 const LeafIcon = L.Icon.extend({
   options: {
@@ -18,4 +18,4 @@ export const technoIcon = new LeafIcon({ iconUrl: techno });
 export const rockIcon = new LeafIcon({ iconUrl: rock });
 export const rapIcon = new LeafIcon({ iconUrl: rap });
 export const popIcon = new LeafIcon({ iconUrl: pop });
-export const mikrofon = new LeafIcon({ iconUrl: mikrofon });
+export const pinezka = new LeafIcon({ iconUrl: pinezka });
