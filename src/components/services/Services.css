@@ -3,7 +3,7 @@
   justify-content: flex-start;
   font-size: 48px;
   font-weight: 600;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-left: 60px;
   /* background-color: aqua; */
 }
@@ -20,8 +20,8 @@
   padding: 10px;
 }
 
-.services_obj {
-  background-color: #27b4d3;
+.services_mapa {
+  background-color: #11bee4;
   padding: 55px;
   margin: 100px;
   flex-direction: row;
@@ -29,90 +29,59 @@
   justify-content: center;
   flex-direction: row;
   margin-top: 100px;
-  margin-right: 700px;
-  width: 100px;
-  height: 100px;
+  margin-left: 700px;
+  width: 300px;
+  height: 300px;
+}
+
+.services_mapa:hover {
+  background-color: white;
 }
 
 .services_obj2 {
   background-color: #a627d3;
-  padding: 55px;
+  padding: 50px;
   margin: 100px;
-  margin-top: 100px;
+  margin-top: -40px;
   flex-direction: row;
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-right: 700px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
-.services_obj3 {
+.services_obj2:hover {
+  background-color: white;
+}
+
+.services_obj {
   background-color: #d37a27;
   padding: 50px;
   margin: 100px;
-  margin-top: 100px;
+  margin-top: 0px;
   flex-direction: row;
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-right: 700px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
-
-/* .obrazki {
-  background-color: brown;
-  width: 285px;
-  height: 280px;
-  margin: 10px 0px;
-  flex-direction: column;
-} */
-
-.obrazek1 {
-  /* background-color: black; */
-  width: 283px;
-  height: 261px;
-  padding: 10px;
-  margin: 200px;
-  margin-top: 70px;
+.services_obj:hover {
+  background-color: white;
 }
-
-.obrazek2 {
-  /* background-color: rgb(38, 211, 41); */
-  width: 300px;
-  height: 261px;
-  padding: 10px;
-  margin: 200px;
-  margin-top: -150px;
-}
-
-.obrazek3 {
-  /* background-color: rgb(168, 28, 28); */
-  width: 283px;
-  height: 261px;
-  padding: 10px;
-  margin: 200px;
-  margin-top: -190px;
-}
-
-/* .koncerty {
-  width: 600px;
-}
-
-.klienci {
-  width: 600px;
-}
-
-.koncert_klient {
-  width: 600px;
-} */
 
 .services_baza_danych {
-  width: 283px;
-  height: 261px;
+  width: 150px;
+  height: 150px;
   padding: 10px;
-  margin: 400px;
-  margin-top: -1025px;
+  margin-left: 5px;
+  margin-top: -600px;
+}
+
+.mapa {
+  width: 300px;
+  height: 300px;
 }
