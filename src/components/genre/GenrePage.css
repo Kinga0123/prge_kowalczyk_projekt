@@ -1,0 +1,16 @@
+.genre-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.genre-page h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.genre-page p {
+  font-size: 36px;
+  line-height: 1.5;
+}

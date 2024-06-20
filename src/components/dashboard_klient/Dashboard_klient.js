@@ -32,17 +32,32 @@ function Dashboard_klient() {
       image: Julia,
     },
   ];
+
+  const createPath = (name) => {
+    return `/genres/${name
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")}`;
+  };
+
   return (
     <div>
       <div className="button">
-        <Link to="map_klienci">
+        <Link to="map">
           <img className="mapa_button" src={mapa} alt="mapa" />
         </Link>
         <h1 className="title">Baza klientów</h1>
         <div className="card-container">
-          {input_list.map((item) => {
-            return <MediaCard name={item.name} image={item.image} />;
-          })}
+          {input_list.map((item) => (
+            <Link
+              key={item.name}
+              to={createPath(item.name)}
+              className="card-link"
+            >
+              <MediaCard name={item.name} image={item.image} />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
