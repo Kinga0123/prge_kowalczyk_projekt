@@ -86,7 +86,7 @@ function Map() {
             )}
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Mapa klientów">
-            {koncerty ? (
+            {klienci ? (
               <GeoJSON data={klienci} onEachFeature={makePopup2} />
             ) : (
               ""

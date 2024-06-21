@@ -10,7 +10,21 @@
   font-style: italic;
 }
 
-.genre-page p {
+.description {
+  margin-left: -800px;
+  margin-top: -200px;
   font-size: 36px;
   line-height: 1.5;
+}
+
+.description2 {
+  margin-top: 150px;
+  line-height: 1.5;
+  font-size: 28px;
+}
+
+.img {
+  margin-left: 750px;
+  width: 400px;
+  height: 300px;
 }
