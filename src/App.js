@@ -9,6 +9,7 @@ import Dashboard from "./components/dashboard_koncert/Dashboard";
 import Dashboard_klient from "./components/dashboard_klient/Dashboard_klient";
 import Dashboard_koncert_klient from "./components/dashboard_koncert_klient/Dashboard_koncert_klient";
 import About from "./components/about/About";
+import GenrePage from "./components/genre/GenrePage"; // Importuj komponent GenrePage
 
 const router = createBrowserRouter([
   {
@@ -48,16 +49,16 @@ const router = createBrowserRouter([
     element: <Map />,
   },
   {
-    path: "/services/dashboard_klient/map_klienci",
-    element: <Mapklienci />,
-  },
-  {
-    path: "/services/dashboard_koncert_klient/map_koncert_klient",
-    element: <Mapkoncertklient />,
+    path: "/services/dashboard_klient/map",
+    element: <Map />,
   },
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/genres/:genre", // Dodaj dynamiczną trasę
+    element: <GenrePage />, // Komponent do obsługi dynamicznej ścieżki
   },
 ]);
 

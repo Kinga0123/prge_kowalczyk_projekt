@@ -11,27 +11,21 @@ import MediaCard from "./Card";
 
 function Dashboard() {
   const input_list = [
-    {
-      name: "Disco Polo",
-      image: discopolo,
-    },
-    {
-      name: "Techno",
-      image: techno,
-    },
-    {
-      name: "Rock",
-      image: rock,
-    },
-    {
-      name: "Rap",
-      image: rap,
-    },
-    {
-      name: "Pop",
-      image: pop,
-    },
+    { name: "Disco Polo", image: discopolo },
+    { name: "Techno", image: techno },
+    { name: "Rock", image: rock },
+    { name: "Rap", image: rap },
+    { name: "Pop", image: pop },
   ];
+
+  const createPath = (name) => {
+    return `/genres/${name
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")}`;
+  };
+
   return (
     <div>
       <div className="button">
@@ -40,9 +34,15 @@ function Dashboard() {
         </Link>
         <h1 className="title">Baza koncertów</h1>
         <div className="card-container">
-          {input_list.map((item) => {
-            return <MediaCard name={item.name} image={item.image} />;
-          })}
+          {input_list.map((item) => (
+            <Link
+              key={item.name}
+              to={createPath(item.name)}
+              className="card-link"
+            >
+              <MediaCard name={item.name} image={item.image} />
+            </Link>
+          ))}
         </div>
       </div>
     </div>

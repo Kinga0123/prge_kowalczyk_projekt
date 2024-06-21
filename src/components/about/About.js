@@ -28,26 +28,24 @@ function About() {
           Dodatkowo wykorzystano również wyszukiwarkę internetową Google w celu
           wyszukiwania odpowiedniej grafiki. Całość projektu została
           zaprogramowana w języku JavaScript przy pomocy Visual Studio Code,
-          który jest prostym edytorem kodu. Granice województw wygenerowano
-          dzięki dostępowi do Geoservera oraz oprogramowania QGIS.
+          który jest prostym edytorem kodu. Mapy wygenerowano dzięki dostępowi
+          do Geoservera i połączeniu bazy danych z pgAdmin oraz oprogramowania
+          QGIS.
         </div>
         <div className="podglad">
           <iframe
-            class="mapkoncertklient"
-            src="http://localhost:3000/services/map_koncert_klient"
+            class="map"
+            src="http://localhost:3000/services/map"
             frameborder="0"
             allowfullscreen
           ></iframe>
         </div>
-        <div className="podpis_mapy">
-          Podgląd mapy klientów na wybranym koncercie.
-        </div>
+        <div className="podpis_mapy">Podgląd mapy</div>
         <div className="opis2">
           Przy użyciu geoportalu użytkownik będzie posiadał dostęp do wybranych
-          usług, jakimi jest wyświetlanie mapy oraz bazy danych dotyczących
-          koncertów, klientów oraz klientów wybranego koncertu. Przy pomocy
-          zaprojektowanych przycisków nastąpi przekierowanie do odpowiednich
-          elementów strony.
+          usług, jakimi jest wyświetlanie map oraz bazy danych dotyczących
+          koncertów i klientów. Przy pomocy zaprojektowanych przycisków nastąpi
+          przekierowanie do odpowiednich elementów strony.
         </div>
         <div className="autor">Autor: sierż. pchor. Kinga Kowalczyk</div>
       </div>

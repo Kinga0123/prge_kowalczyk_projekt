@@ -1,0 +1,30 @@
+.genre-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.genre-page h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.description {
+  margin-left: -800px;
+  margin-top: -200px;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.description2 {
+  margin-top: 150px;
+  line-height: 1.5;
+  font-size: 28px;
+}
+
+.img {
+  margin-left: 750px;
+  width: 400px;
+  height: 300px;
+}

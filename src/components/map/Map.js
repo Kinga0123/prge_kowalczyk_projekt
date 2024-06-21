@@ -1,44 +1,70 @@
 import React, { useEffect, useState } from "react";
 import "./Map.css";
-import {
-  LayersControl,
-  MapContainer,
-  TileLayer,
-  WMSTileLayer,
-  GeoJSON,
-} from "react-leaflet";
+import { LayersControl, MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
-import MarkerPlacement from "./MarkerPlacement";
+import pinezka from "./pinezka.png";
+import L from "leaflet";
+
+let DefaultIcon = L.icon({
+  iconUrl: pinezka,
+  iconSize: [50, 50],
+  iconAnchor: [30, 10],
+});
+
+let KlienciIcon = L.icon({
+  iconUrl: pinezka,
+  iconSize: [50, 50],
+  iconAnchor: [30, 10],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 function Map() {
-  const [wojewodztwa, setwojewodztwa] = useState(null);
+  const [koncerty, setKoncerty] = useState(null);
+  const [klienci, setKlienci] = useState(null);
 
   const makePopup = (feature, layer) => {
     if (feature.properties) {
-      // console.log(feature.properties);
       layer.bindPopup(`
-      <h1>Dane województwa</h1>
-      <strong>Nazwa:</strong> ${feature.properties.jpt_nazwa_}</br>
-      <strong>Powierzchnia:</strong>${feature.properties.jpt_powier} m2 </br>
-      <img src=${feature.properties.img_source} alt="Lamp" width="32" height="32"/>`);
+      <h1>Dane koncertu</h1>
+      <strong>Gatunek muzyczny:</strong> ${feature.properties.nazwa}</br>`);
     }
   };
-
+  const makePopup2 = (feature, layer) => {
+    if (feature.properties) {
+      layer.bindPopup(`
+      <h1>Dane klienta</h1>
+      <strong>Imię:</strong> ${feature.properties.imie}</br>
+      <strong>Miejsce zamieszkania:</strong> ${feature.properties.miasto}</br>
+      <strong>Wybrany koncert:</strong> ${feature.properties.koncert}</br>
+      <strong>Posiada bilet:</strong> ${feature.properties.bilet}`);
+    }
+  };
   useEffect(() => {
-    // console.log("aaa");
-    const getData = () => {
+    const getKoncertyData = () => {
       axios
         .get(
-          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Agranice_wojewodztw_db_4326&maxFeatures=50&outputFormat=application%2Fjson"
+          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Akoncerty&maxFeatures=50&outputFormat=application%2Fjson"
         )
-        .then((dane) => {
-          // console.log(dane);
-          setwojewodztwa(dane.data);
+        .then((response) => {
+          setKoncerty(response.data);
         });
     };
-    getData();
+    getKoncertyData();
+
+    const getKlienciData = () => {
+      axios
+        .get(
+          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Aklienci_db&maxFeatures=50&outputFormat=application%2Fjson"
+        )
+        .then((response) => {
+          setKlienci(response.data);
+        });
+    };
+    getKlienciData();
   }, []);
+
   return (
     <div className="map">
       <MapContainer center={[52.2322222, 21.0]} zoom={6}>
@@ -52,20 +78,20 @@ function Map() {
           <LayersControl.BaseLayer name="Google Satelite">
             <TileLayer url="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}" />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Granice województw DB">
-            <WMSTileLayer
-              layers="granice_wojewodztw"
-              url="http://127.0.0.1:8080/geoserver/prge/wms"
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.Overlay name="Granice województw DB WFS">
-            {wojewodztwa ? (
-              <GeoJSON data={wojewodztwa} onEachFeature={makePopup} />
+          <LayersControl.Overlay name="Mapa koncertów">
+            {koncerty ? (
+              <GeoJSON data={koncerty} onEachFeature={makePopup} />
             ) : (
               ""
             )}
           </LayersControl.Overlay>
-          <MarkerPlacement />
+          <LayersControl.Overlay name="Mapa klientów">
+            {klienci ? (
+              <GeoJSON data={klienci} onEachFeature={makePopup2} />
+            ) : (
+              ""
+            )}
+          </LayersControl.Overlay>
         </LayersControl>
       </MapContainer>
     </div>
