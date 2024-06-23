@@ -21,7 +21,7 @@ let KlienciIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 function Map() {
-  const [koncerty, setKoncerty] = useState(null);
+  const [koncerty, setKoncerty] = useState(null); //null oznacza ze na poczatku danych nie ma
   const [klienci, setKlienci] = useState(null);
 
   const makePopup = (feature, layer) => {

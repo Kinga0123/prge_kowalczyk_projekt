@@ -20,9 +20,9 @@ function Dashboard() {
 
   const createPath = (name) => {
     return `/genres/${name
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .normalize("NFD")
+      .toLowerCase() // zamiana na male litery
+      .replace(/\s+/g, "-") // spacje i tabulatory zamienione na -
+      .normalize("NFD") // rozdziela znaki zlozone np litery z akcentami np ó
       .replace(/[\u0300-\u036f]/g, "")}`;
   };
 

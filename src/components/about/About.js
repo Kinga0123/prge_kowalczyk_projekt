@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 
 function About() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); //tryb ciemny na poczatku jest wylaczony
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);

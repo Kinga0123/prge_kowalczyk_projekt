@@ -84,7 +84,7 @@ const clientDescriptions = {
 };
 
 function GenrePage() {
-  const { genre } = useParams();
+  const { genre } = useParams(); //useParams pozwala na uzyskanie dostępu do parametrów aktualnej ścieżki URL
 
   const genreInfo = genreDescriptions[genre];
 
